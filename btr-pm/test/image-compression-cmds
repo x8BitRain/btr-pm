@@ -1,0 +1,12 @@
+mogrify -path /home/mint/btr-pm/img-small -resize 1200 *.jpg
+
+
+find '/home/mint/btr-pm/img-small' -type f -iname '*.jpg' -exec jpeg-recompress --quality medium --min 60 --method ms-ssim \{} \{} \;
+
+
+cwebp -sharp_yuv -m 6 -pass 10 -q 75 "$file" -o "${file%.jpg}.webp"
+
+for file in *.jpg ; do ./cwebp -sharp_yuv -m 6 -pass 10 -q 75 "$file" -o "${file%.jpg}.webp"; done
+
+for file in *.webp ; do convert "$file" "${file%.webp}.jpg"; done
+

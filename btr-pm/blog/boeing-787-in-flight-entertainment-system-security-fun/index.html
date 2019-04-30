@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Boeing 787 In Flight Entertainment System Security fun!</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/blog/css/screen.css">
+  <meta name="description" content="Digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="index.html">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="amphtml" href="https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/amp/index.html">
+  <meta property="og:site_name" content="btr.pm">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Boeing 787 In Flight Entertainment System Security fun!">
+  <meta property="og:description" content="In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+  <meta property="og:url" content="https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/">
+  <meta property="og:image" content="https://btr.pm/blog/blog/content/images/2019/02/download-4.webp">
+  <meta property="article:published_time" content="2017-05-12T08:20:00.000Z">
+  <meta property="article:modified_time" content="2019-02-18T09:37:39.000Z">
+  <meta property="article:tag" content="Tech">
+  <meta property="article:tag" content="netsec">
+
+  <meta property="article:publisher" content="https://www.facebook.com/ghost">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Boeing 787 In Flight Entertainment System Security fun!">
+  <meta name="twitter:description" content="In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+  <meta name="twitter:url" content="https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/">
+  <meta name="twitter:image" content="https://btr.pm/blog/blog/content/images/2019/02/download-3.webp">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="Dash Bell">
+  <meta name="twitter:label2" content="Filed under">
+  <meta name="twitter:data2" content="Tech, netsec">
+  <meta name="twitter:site" content="@x8BitRain">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="298">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "publisher": {
+        "@type": "Organization",
+        "name": "btr.pm",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://btr.pm/blog/favicon.ico",
+          "width": 60,
+          "height": 60
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dash Bell",
+        "url": "https://btr.pm/blog/author/dash/",
+        "sameAs": []
+      },
+      "headline": "Boeing 787 In Flight Entertainment System Security fun!",
+      "url": "https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/",
+      "datePublished": "2017-05-12T08:20:00.000Z",
+      "dateModified": "2019-02-18T09:37:39.000Z",
+      "keywords": "Tech, netsec",
+      "description": "In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic&#x27;s In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://btr.pm/blog/"
+      }
+    }
+  </script>
+  
+  <meta name="generator" content="Ghost 2.14">
+  <link rel="alternate" type="application/rss+xml" title="btr.pm" href="./rss/index.html">
+
+</head>
+
+<body class="post-template tag-tech tag-netsec">
+
+  <div class="site-wrapper">
+
+    <header class="site-header outer">
+      <div class="inner">
+        <nav class="site-nav">
+          <div class="site-nav-left">
+            <a class="site-nav-logo" href="./index.html">btr.pm</a>
+            <ul class="nav" role="menu">
+              <li class="nav-home" role="menuitem"><a href="https://btr.pm/">Home</a></li>
+              <li class="nav-blog-index" role="menuitem"><a href="https://btr.pm/blog">Blog Index</a></li>
+            </ul>
+
+          </div>
+          <div class="site-nav-right">
+        </nav>
+        </div>
+    </header>
+
+    <main id="site-main" class="site-main outer">
+      <div class="inner">
+
+        <article class="post-full post tag-tech tag-netsec no-image">
+
+          <header class="post-full-header">
+            <section class="post-full-meta">
+              <time class="post-full-meta-date" datetime="2017-05-12">12 May 2017</time>
+              </section>
+            <h1 class="post-full-title">Boeing 787 In Flight Entertainment System Security fun!</h1>
+          </header>
+
+          <section class="post-full-content">
+            <div class="post-content">
+              <p>In 2016 a <a href="http://blog.ioactive.com/2016/12/in-flight-hacking-system.html">post from IOActive Labs</a> showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) used to be, found in thousands of commercial
+                aircraft the post raised some concerns among the tech savvy frequent flyer, that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.</p>
+              <figure class="kg-card kg-image-card"><img src="/blog/content/images/2019/02/download.webp" onerror="this.onerror=null; this.src='/blog/content/images/2019/02/download.jpg'" class="kg-image">
+                <figcaption>It's rare to find a Boeing-made IFE in their planes, you're most likely to find a Panasonic IFE such as the Panasonic EX3. (<a href="http://www.boeing.co.uk/products-services/blog/commercial-airplanes/787.page">Source</a>)</figcaption>
+              </figure>
+              <p>I was on a Scoot Airlines flight from Singapore on one of their 787 Dreamliners when I was handed an access code to their in flight movies page by a stewardess, she told me to access it by connecting to the on board WiFi and going to http://scootwifi.com/.
+                This domain doesn't exist outside the aircraft so they set up a DNS server on the plane to allow passengers to access the site with that URL.</p>
+              <figure class="kg-card kg-image-card"><img src="/blog/content/images/2019/02/download--1-.webp" onerror="this.onerror=null; this.src='/blog/content/images/2019/02/download--1-.jpg'" class="kg-image">
+                <figcaption>I was using a Chromium on a laptop with Ubuntu to access the site, so naturally the flash player on the site didn't work. Why are they still using flash? Oh, god.</figcaption>
+              </figure>
+              <p>I started poking around the site's source to find any interesting directories or domains on the plane but the only ones I could find 403'd when attempting to access them, not bad. I noticed a packet being received by the browser every few
+                seconds called <a href="https://github.com/x8BitRain/InFlightEntertainment-Scoot787/blob/master/flightstatus"><em>flightstatus</em></a>, it's a JSON file with a bunch of aircraft statistics and values.</p>
+              <figure class="kg-card kg-image-card"><img src="/blog/content/images/2019/02/download--2-.webp" onerror="this.onerror=null; this.src='/blog/content/images/2019/02/download--2-.jpg'" class="kg-image"></figure>
+              <p>This file includes a bunch of interesting values such as:</p>
+              <blockquote>
+                <p>td_id_decompression: "0"</p>
+              </blockquote>
+              <p>Not sure whether this indicates whether the cabin is pressurized or whether or not an uncontrolled decompression has happened, let's hope it never changes to 1 if it is the latter.</p>
+              <blockquote>
+                <p>td_id_all_doors_closed:"1"</p>
+              </blockquote>
+              <p>Whether or not all the doors are closed.</p>
+              <blockquote>
+                <p>td_id_flight_phase:"7"</p>
+              </blockquote>
+              <p>According to inflight.js, there are 16 different flight phases "CRUISING" being the phase when I found the file. I somehow doubt these phases are set manually because the "FLARE" phase usually lasts a few seconds before touchdown so an on
+                board computer must be able to detect the current phase based on the flight plan or something along those lines.</p>
+              <blockquote>
+                <p>FlightPhase: {<br> UNKNOWN: 0,<br> POWER_UP: 1,<br> ENGINES_START: 2,<br> TAKE_OFF_POWER: 3,<br> ACCELERATING: 4,<br> LIFT_OFF: 5,<br> CLIMB: 6,<br> CRUISING: 7,<br> DESCENDING: 8,<br> APPROACH: 9,<br> GO_AROUND: 10,<br> FLARE: 11,<br>                  TOUCHDOWN: 12,<br> TAXI_TO_STOP: 13,<br> ENGINES_STOP: 14,<br> MAINTENANCE: 15 }</p>
+              </blockquote>
+              <p>There is also navigational info in this file such as:</p>
+              <blockquote>
+                <p>td_id_fltdata_head_wind_speed:""<br> td_id_fltdata_mach:"0847"
+                  <br> td_id_fltdata_present_position_latitude:"80007562"
+                  <br> td_id_fltdata_present_position_longitude:"00107289"
+                  <br> td_id_fltdata_time_at_destination:"1522"
+                  <br> td_id_fltdata_time_at_origin:"1522"
+                  <br> td_id_fltdata_time_at_takeoff:"000305170602"
+                  <br> td_id_fltdata_time_to_destination:"0201"
+                  <br> td_id_fltdata_true_heading:"0161"
+                  <br> td_id_fltdata_wind_direction:"0286"
+                  <br> td_id_fltdata_wind_speed:"-008"
+                </p>
+              </blockquote>
+              <p>The only value I could see that was being utilized by the website was the <em>tdidfltdatatimetodestination</em> value which was shown at the top of the scootwifi.com page. This leads me to believe that this data is intended for use in the
+                Flight Attendants Panel or the in-seat IFE system which have the interactive maps to see where the plane is on it's trip.</p>
+              <figure class="kg-card kg-image-card"><img src="/blog/content/images/2019/02/download.jpeg" class="kg-image">
+                <figcaption>Some of the newer IFEs have 3D flight maps which would make use of this data. (<a href="http://edition.cnn.com/2014/02/09/travel/flight-maps-the-newest-airline-moneymaker/">Source</a>)</figcaption>
+              </figure>
+              <p>I saw a file called <em><a href="https://github.com/x8BitRain/InFlightEntertainment-Scoot787/blob/master/software.js">software.js</a> </em>that included links to some references to DRM plugins and extensions used for watching movies, for
+                OSX, Windows, iOS, Android and an NPAPI plugin for Chrome.</p>
+              <blockquote>softwareLocation.plugin.drm.version = '3.0.1.1'; softwareLocation.plugin.drm.mac.software = 'PanasonicDrmPlugin.dmg'; softwareLocation.plugin.drm.mac.software_and_extension = 'PanasonicDrmPlugin_Extension.dmg'; softwareLocation.plugin.drm.windows.software
+                = 'PanasonicDrmPlugin.msi'; softwareLocation.plugin.drm.windows.software_and_extension = 'PanasonicDrmPlugin_Extension.msi'; softwareLocation.plugin.flash.version = '11.5'; softwareLocation.plugin.flash.mac = softwareLocation.plugin.flash.mac;
+                softwareLocation.plugin.flash.windows.activex = softwareLocation.plugin.flash.windows.activex; softwareLocation.plugin.flash.windows.npapi = softwareLocation.plugin.flash.windows.npapi; softwareLocation.mobile.ios.shellApp.osVersion =
+                '5'; softwareLocation.mobile.ios.shellApp.sdkVersion = softwareLocation.mobile.ios.shellApp.sdkVersion; softwareLocation.mobile.ios.shellApp.appVersion = softwareLocation.mobile.ios.shellApp.appVersion; softwareLocation.mobile.ios.shellApp.url
+                = softwareLocation.mobile.ios.shellApp.url; softwareLocation.mobile.android.shellApp.osVersion = '4.0'; softwareLocation.mobile.android.shellApp.sdkVersion = '01.03.0.34'; softwareLocation.mobile.android.shellApp.appVersion = '01.03.0.34';
+                softwareLocation.mobile.android.shellApp.url = 'ScooTVMediaPlayer.apk';</blockquote>
+              <p>This is a questionable approach to digitally restricting the movies available because you aren't told exactly what you're going to install other than it will make the movie you want to watch play, it could be something along the lines of
+                the <a href="https://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">Sony Anti-Piracy Rootkit</a> for all I know. Not to mention that NPAPI plugins for Chrome have been depreciated since January of 2014 because of security
+                reasons. I was never prompted to download or install any of these "extensions" nor could I craft a link to download them myself so I couldn't do any digging into what exactly was being installed (most likely <a href="https://www.panasonic.aero/2015/02/24/panasonic-avionics-selects-intertrusts-expressplay-marlin-drm-techology-x-series-inflight-entertainment-ife-platform/">ExpressPlay's Marlin DRM</a>),
+                why not just use <a href="http://www.widevine.com/">WideVine</a> which is built into most browsers?</p>
+              <figure class="kg-card kg-image-card"><img src="/blog/content/images/2019/02/download--3-.webp" onerror="this.onerror=null; this.src='/blog/content/images/2019/02/download--3-.jpg'" class="kg-image">
+                <figcaption>A really cool part of the whole system was how the page would fade into this announcement screen whenever the captain had something to say and fade back to the previous page.</figcaption>
+              </figure>
+              <p>In hindsight it is really not a good idea to be screwing with aircraft equipment like this, please don't be an idiot like me.  </p>
+              <p>A basic port scan shows that:</p>
+              <ul>
+                <li>Ports 80 and 443 are running NGINX 1.10 with a DigiCert SSL certificate for api.airpana.com.</li>
+                <li>Port 5710 is running <em>something.</em></li>
+                <li>Ports 58000 and 58001 are running lighttpd with a DigiCert SSL certificate for streaming.inflightpanasonic.aero.</li>
+                <li>The estimated OS running on the IFE server was Linux 3.2 - 4.6 (previous IFEs used Linux versions from 2002).</li>
+              </ul>
+              <p>This is pretty decent considering how horribly outdated some of the older IFEs are, I once flew in a Malaysian Airlines 767 with an IFE that showed Linux version 2.4 from 2002.</p>
+              <h1 id="final-thoughts">Final Thoughts</h1>
+              <p>I think the browser based approach to the IFE is a much better way of giving people something to do during flights because just about everyone has a smartphone or laptop nowadays, those in-seat systems with those horrible capacitive touch
+                screens that freeze at any given moment are better off being a relic of the past. </p>
+              <p>The use of newer software to power the back end is a welcome addition as older software can contain serious vulnerabilities and could potentially lead to the cabin system being vulnerable. However, I think the flash player and the dodgy
+                implementation of DRM could be done without, especially the depreciated NPAPI method of enabling it, the biggest problem being that I don't know exactly what I'm installing when they prompt me to download their plugins or their apps. Does
+                it collect data? Does it it install root certificates I don't want? Will it screw with my browser? Some transparency would be nice, but even nicer would be to use something that doesn't need to be installed via an .MSI/.DMG file like WideVine
+                which already exists in Chrome.</p>
+            </div>
+          </section>
+
+          <footer class="post-full-footer">
+
+            <section class="author-card">
+              <span class="avatar-wrapper"><img src="/blog/content/images/pfp.jpg"></img>
+</span>
+              <section class="author-card-content">
+                <h4 class="author-card-name"><a href="/blog">Dash Bell</a></h4>
+                <p>Read <a href="/blog">more posts</a> by this author.</p>
+              </section>
+            </section>
+            <div class="post-full-footer-right">
+              <div class="floating-header-share-label">Share this <svg id="hand" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+</svg>
+                <div class="floating-header-share">
+                  <a class="floating-header-share-tw" href="https://twitter.com/share?text=Boeing%20787%20In%20Flight%20Entertainment%20System%20Security%20fun!&amp;url=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+        </a>
+                  <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+        </a>
+                </div>
+              </div>
+            </div>
+
+          </footer>
+
+        </article>
+
+      </div>
+    </main>
+
+    <aside class="read-next outer">
+      <div class="inner">
+        <div class="read-next-feed">
+
+        </div>
+      </div>
+    </aside>
+
+    <div class="floating-header">
+      <div class="floating-header-logo">
+        <a href="/index.html">
+            <span>btr.pm</span>
+        </a>
+      </div>
+      <span class="floating-header-divider">—</span>
+      <div class="floating-header-title">Boeing 787 In Flight Entertainment System Security fun!</div>
+      <div class="floating-header-share">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Boeing%20787%20In%20Flight%20Entertainment%20System%20Security%20fun!&amp;url=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+        </a>
+      </div>
+      <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+    </div>
+
+    <footer class="site-footer outer">
+      <div class="site-footer-content inner">
+        <section class="copyright"><a href="/index.html">btr.pm</a>&nbsp
+          <p id="yr" style="display:inline"></p>
+        </section>
+        <div class="social-links">
+          <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+</svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+    <script>
+      var images = document.querySelectorAll('.kg-gallery-image img');
+      images.forEach(function(image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+      })
+    </script>
+    <script>
+      var d = new Date();
+      document.getElementById("yr").innerHTML = d.getFullYear();
+    </script>
+</body>
+
+</html>

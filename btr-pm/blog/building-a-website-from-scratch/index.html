@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Building and optimizing a static website from scratch.</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/blog/css/screen.css">
+    <meta name="description" content="An adventure in static pages, layouts, web frameworks, image compression and load times.">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://btr.pm/blog/building-a-website-from-scratch/amp/index.html">
+    <meta property="og:site_name" content="btr.pm">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Building and optimizing a static website from scratch.">
+    <meta property="og:description" content="An adventure in static pages, layouts, web frameworks, image compression and load times.">
+    <meta property="og:url" content="https://btr.pm/blog/building-a-website-from-scratch/">
+    <meta property="article:published_time" content="2019-02-21T15:43:54.000Z">
+    <meta property="article:modified_time" content="2019-04-20T17:44:24.000Z">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Webdev">
+    <meta property="article:publisher" content="https://btr.pm/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Building and optimizing a static website from scratch.">
+    <meta name="twitter:description" content="An adventure in static pages, layouts, web frameworks, image compression and load times.">
+    <meta name="twitter:url" content="https://btr.pm/blog/building-a-website-from-scratch/">
+    <meta name="twitter:image" content="http://btr.pm/blog/content/images/2019/02/static.webp">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Dash Bell">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Tech, Webdev">
+    <meta name="twitter:site" content="@x8BitRain">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "publisher": {
+            "@type": "Organization",
+            "name": "btr.pm",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://btr.pm/favicon.ico",
+                "width": 60,
+                "height": 60
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Dash Bell",
+            "url": "",
+            "sameAs": []
+        },
+        "headline": "Building and optimizing a static website from scratch.",
+        "url": "https://btr.pm/blog/building-a-website-from-scratch/",
+        "datePublished": "2019-02-21T15:43:54.000Z",
+        "dateModified": "2019-02-21T15:43:54.000Z",
+        "keywords": "Tech, Webdev",
+        "description": "An adventure in static pages, layouts, web frameworks, image compression and load times.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://btr.pm/"
+        }
+    }
+    </script>
+    <meta name="generator" content="Ghost 2.14">
+    <link rel="alternate" type="application/rss+xml" title="btr.pm" href="../rss/index.html">
+</head>
+
+<body class="post-template tag-tech tag-webdev">
+    <div class="site-wrapper">
+        <header class="site-header outer">
+            <div class="inner">
+                <nav class="site-nav">
+                    <div class="site-nav-left">
+                        <a class="site-nav-logo" href="../index.html">btr.pm</a>
+                        <ul class="nav" role="menu">
+                            <li class="nav-home" role="menuitem"><a href="https://btr.pm/">Home</a></li>
+                            <li class="nav-blog-index" role="menuitem"><a href="https://btr.pm/blog">Blog Index</a></li>
+                        </ul>
+                    </div>
+        </header>
+        <main id="site-main" class="site-main outer">
+            <div class="inner">
+                <article class="post-full post tag-tech tag-webdev no-image">
+                    <header class="post-full-header">
+                        <section class="post-full-meta">
+                            <time class="post-full-meta-date" datetime="2019-02-21">21 February 2019</time>
+                        </section>
+                        <h1 class="post-full-title">Building and optimizing a static website from scratch.</h1>
+                    </header>
+                    <section class="post-full-content">
+                        <div class="post-content">
+                            <p>An adventure in static pages, layouts, web frameworks, image compression and load times.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/static-2.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/static-2.jpg'" class="kg-image"></figure>
+                            <p>I used to host my website on Squarespace, a WYSIWYG website builder and CMS you often see promoted by just about every YouTube channel there is.</p>
+                            <p>It's pretty good if you want something easy and conventient but for the $144 per year pricetag for the lowest package, it just doesn't satisfy my needs.</p>
+                            <p>So I set out to build my own site from scratch using only HTML5, CSS3 and JS, and optimize it as much as I can, learning as I build it. This writeup contains a few long sections so I've made an index so you can skip to the parts you don't want to read.</p>
+                            <ul>
+                                <li><a href="index.html#hosting">Hosting</a></li>
+                                <li><a href="index.html#layoutandframework">Layout and Framework</a>
+                                    <ul>
+                                        <li><a href="index.html#uikit">UIKit</a></li>
+                                        <li><a href="index.html#imagegallery">Image Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index.html#imageoptimization">Image Optimization</a>
+                                    <ul>
+                                        <li><a href="index.html#lazyloading">Lazy Loading</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index.html#pagespeed">Page Speed</a>
+                                    <ul>
+                                        <li><a href="index.html#contentdeliverynetworkcdn">CDN</a></li>
+                                        <li><a href="index.html#fonts">Fonts</a></li>
+                                        <li><a href="https://btr.pm/blog/building-a-website-from-scratch/">Small Optimizations</a></li>
+                                        <li><a href="index.html#Results">Results</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h2 id="hosting">Hosting.</h2>
+                            <p>How can I host my website for less? </p>
+                            <p>Seeing as this project is going to be built in HTML, CSS and JS, I'm not going to need a server that runs PHP or a database like WordPress does. It's just going to be static pages.</p>
+                            <p>There are several hosting services that exist exclusively for static pages, some of the more popular ones include <a href="https://pages.github.com/">GitHub Pages</a>, <a href="https://www.netlify.com/">Netlify</a> and even Azure. I decided to use <a href="https://firebase.google.com/">Google Firebase</a> because it's really simple to use as it's free provided I don't use over 10GB of bandwidth per month...</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image.jpg'" class="kg-image"></figure>
+                            <p>That's kind of an issue considering the images I plan on hosting are about 10.1 MB of images on the home page alone and 40 MB of full resolution. So if 10,000 people were to visit the site in a month I'd run out of my free usage.</p>
+                            <p>This is fine as I only plan on using Firebase for the hosting temporarily, if I end up using too much bandwidth I'll likely move the site to a DigitalOcean droplet and get 1 TB of bandwith for $5/month. </p>
+                            <h2 id="layoutandframework">Layout and Framework</h2>
+                            <h3 id="uikit">UIKit</h3>
+                            <p>I decided against building every element of the website from scratch as I'm not that insane. Most websites build off of templates or use existing web frameworks like Bootstrap, vue.js or <a href="https://getmdl.io/">Material Design Lite</a>, <a href="https://materializecss.com">Materialize</a>, etc. </p>
+                            <p>I really like the minimalist look and ease of use that <a href="https://getuikit.com">UIKit</a> offers, it has dozens of components with several parameters, icons and great documentation to go with it. </p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-4.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-4.jpg'" class="kg-image">
+                                <figcaption><a href="https://getuikit.com/docs/card">https://getuikit.com/docs/card</a></figcaption>
+                            </figure>
+                            <p>I can basically browse their list of components, copy the example markup and plug it into any divs I like and the whole thing is responsive out of the box, you only have to import one JavaScript and CSS library to get it working too. </p>
+                            <h3 id="imagegallery">Image Gallery</h3>
+                            <p>The first thing I want people to see when they visit the site is an image gallery of my pictures, and it has to do 2 things right in order to satisfy my needs.</p>
+                            <ul>
+                                <li>Be responsive.</li>
+                                <li>Organize itself into a grid that leaves no gaps.</li>
+                            </ul>
+                            <p>This is easier said than done, basically I'm looking for a Google Photos implementation that doesn't involve <a href="https://medium.com/google-design/google-photos-45b714dfbed1">complex mathematical theory </a>to achieve. The first implementation I found was exactly what I needed by Justin Klemm. Unfortunately it's written in JQuery 2.1.3 from 2013, so I'm not going to import a 5+ year old JavaScript library to run an image gallery that doesn't even display properly in latest Firefox. </p>
+                            <p>I also found this post by <a href="https://github.com/xieranmaya/blog/issues/6">xieranmaya </a>detailing his "pure CSS" implementation of Google Photos' layout. Only problem is it relies on AngularJS to do the needed math to scale the images properly.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-6.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-6.jpg'" class="kg-image">
+                                <figcaption>Yeah you can't do that with CSS alone :/</figcaption>
+                            </figure>
+                            <p>I was considering rewriting this in regular Javascript to avoid having to import more JS libraries that only get used for one specific thing when I realized UIKit already has a grid component I can potentially use.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-9.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-9.jpg'" class="kg-image"></figure>
+                            <p>A cool feature of UIKit's grid component is that you can enable a masonry layout just by adding the "masonry: true" attribute to the grid's div, damn, that was easy. Now all I have to do is insert images in the place of the cards they have in the example and I now have a gallery that ticks all the boxes.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-10.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-10.jpg'" class="kg-image"></figure>
+                            <p> Enabling the lightbox is just as easy, I just had to insert "uk-lightbox" into the div that contains the images and it will bring up an image lightbox provided the images are wrapped in an &lt;a href&gt; referencing the image you want the lightbox to display. </p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-11.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-11.jpg'" class="kg-image">
+                                <figcaption>A single div with a few parameters gives you a great image gallery. </figcaption>
+                            </figure>
+                            <h3 id="imageoptimization">Image Optimization.</h3>
+                            <p>Because I'm trying to optimize the website for speed, having 100 high res images on the home page isn't a great idea, so how can I force it to work?</p>
+                            <p>I created two sets of the same image gallery, one set of the gallery is scaled down and compressed thumbnail images for use on the homepage, about 1200x800. The other set is high resolution optimized images for use in the lightbox, about 2000x1300. I'm using 1200x800 thumbnails because when you scale down a large image to a smaller size, it still looks quite sharp. So if I compress 1200x800 images that don't look amazingly clear when viewed in full and display them at 500x300, they look decently sharp.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-13.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-13.jpg'" class="kg-image"></figure>
+                            <p>I experimented with MozJPG and compressing the images with the MS-SSIM compression algorithm and got pretty amazing results. 13.81% of the original image's size with almost no detectable difference.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-15.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-15.jpg'" class="kg-image">
+                                <figcaption>Left: Un-optimized - Right: Optimized</figcaption>
+                            </figure>
+                            <p>Then I thought I'd try WebP because it's basically built for exactly what I'm trying to do, optimize images for the web, conserve bandwidth and retain quality. The results I got from compressing with WebP are pretty crazy.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-17.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-17.jpg'" class="kg-image">
+                                <figcaption>Left: Optimized JPG - Right: WebP</figcaption>
+                            </figure>
+                            <p> The Optimized JPG comes out at 93.3 KB and the WebP brings it down to 30.5 KB with almost no quality difference, what the hell? How!?</p>
+                            <p>The entire set of 101 images in WebP comes out to 10.1 MB versus 12.2 MB in JPG. These are the settings I used on the pictures with the <a href="https://developers.google.com/speed/webp/download">cwebp utility</a>. </p>
+                            <blockquote>cwebp -preset photo -sharp_yuv -m 6 -pass 10 -q 75 "[file]" -o "[file].webp" </blockquote>
+                            <p>As great as WebP seems, there are still some browsers that just don't support it, mainly Safari as of writing this. So for compatability reasons I have to add this fallback to almost every img tag.</p>
+                            <blockquote>onerror="this.onerror=null; this.src='/img/location/img.jpg'"</blockquote>
+                            <h3 id="lazyloading">Lazy Loading</h3>
+                            <p>Despite the images being optimized so well it still leads to 10 MB loaded every time you load the homepage. Fortunately UIKit paired with the latest browsers should lazy load the images, meaning once you scroll into the view of the image it will start to load, instead of all at the same time. That means we the page only loads about 1MB of images in the initial viewport. This doesn't happen on all browsers unfortunately.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-18.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-18.jpg'" class="kg-image"></figure>
+                            <p>When clicking on an image it will load the higher resolution version of the image for better viewing, this is doable by wrapping the image in the gallery with an &lt;a href&gt; pointing to the location of the larger image you want to display in UIKit's lightbox.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-19.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-19.jpg'" class="kg-image"></figure>
+                            <p>The img/ folder is where the larger images are stored while "img-s/" is where the thumbnails are stored.</p>
+                            <h2 id="pagespeed">Page Speed</h2>
+                            <h3 id="contentdeliverynetworkcdn">Content Delivery Network (CDN)</h3>
+                            <p>I made use of CloudFlare to further optimize the load times of the website, CloudFlare has great features for free users, the ones I use are the Caching features to set the browser cache expiration time to 2 days. The Auto Minify function to cut down the size of the HTML, stylesheets and JavaScript files in use on the site. </p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-20.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-20.jpg'" class="kg-image"></figure>
+                            <p>I also used their domain forwarding page rule to forward www. to the root domain and to ensure SSL is always in use.</p>
+                            <h3 id="fonts">Fonts</h3>
+                            <p>On the site I'm using a pretty obscure font called <a href="https://b612-font.com/">B612</a>, it's a font commissioned by Airbus and made by Intactile Design that aims to improve legibility of text on cockpit screens. I think it looks really cool and adds a unique style to the site. I experimented with hosting the fonts on the server rather than requesting the font through Google Fonts.</p>
+                                <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/local-fonts.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/local-fonts.png'" class="kg-image"><figcaption>Hosting the fonts on the server.</figcaption></figure>
+                                <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/goog-fonts.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/goog-fonts.png'" class="kg-image"><figcaption>Importing from Google Fonts.</figcaption></figure>
+                                <p>That's a 3.6 second difference. This is because Google Fonts will intelligently serve only the fonts needed rather than every variation of the font, meant also meant that the CSS for loading the font went from this:</p>
+                                  <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/font-css.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/font-css.png'" class="kg-image"></figure>  
+                                  <p>To this:</p>
+                                  <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/googf-css.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/googf-css.png'" class="kg-image"></figure>  
+                            <h3 id="smalloptimizations">Small Optimizations.</h3>
+                            <p>I put:</p>
+                            <p><code>&lt;link rel="dns-prefetch" href="//cdnjs.cloudflare.com"&gt;</code><br>
+                                <code>&lt;link rel="dns-prefetch" href="//btrdotpm.firebaseapp.com"&gt;</code></p>
+                            <p>Into the <code>&lt;head&gt;</code> of all documents so it resolves CDNJS and the firebaseapp subdomain the content is hosted on early so it doesn't have to resolve those domains for every new image that gets loaded.</p>
+                            <p>UIKit comes with a JS library that contains a few dozen SVG icons you can use anywhere but I only use 5 of them, instead of importing a whole set of 50+ SVG icons on all pages I stored only the ones in use on the server and embedded them with &lt;img src&gt;.</p>
+                            <p><code>&lt;a href="https://github.com/x8BitRain"&gt;&lt;img src="img/github.svg" width="20" height="20"&gt;&lt;/a&gt;</code></p>
+                            <p>Annoyingly, most of UIKit's CSS and JS libraries go unused as I only include 4 components on the home page. I could shave a lot of KBs off the load time if I were to pick out only the parts of the CSS and JS that are in use but the convenience of the CDN embedding the latest UIKit libraries outweighs the shorter load time of having less CSS/JS. </p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-22.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-22.jpg'" class="kg-image"></figure>
+                            <h2 id="results">Results</h2>
+                            <p>The finished product is a pretty quick site with a PageSpeed Insights score of 96 on mobile and 100 on desktop, of course it's not the fastest it can be but I'm pretty happy with the results.</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-24.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-24.jpg'" class="kg-image"></figure>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-25.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-25.jpg'" class="kg-image"></figure>
+                            <p>Comparing load times to the old Squarespace site I had with more or less the same layout as the site I built:</p>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-26.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-26.jpg'" class="kg-image">
+                                <figcaption>Squarespace site</figcaption>
+                            </figure>
+                            <figure class="kg-card kg-image-card"><img src="../content/images/2019/02/image-27.webp" onerror="this.onerror=null; this.src='../content/images/2019/02/image-27.jpg'" class="kg-image">
+                                <figcaption>Static site</figcaption>
+                            </figure>
+                            <p>It's a hell of a lot quicker.</p>
+                        </div>
+                    </section>
+                    <footer class="post-full-footer">
+                        <section class="author-card">
+                            <span class="avatar-wrapper"><img src="/blog/content/images/pfp.jpg"></img>
+                            </span>
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/blog">Dash Bell</a></h4>
+                                <p>Read <a href="/blog">more posts</a> by this author.</p>
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <div class="floating-header-share-label">Share this <svg id="hand" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+                                </svg>
+                                <div class="floating-header-share">
+                                    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Boeing%20787%20In%20Flight%20Entertainment%20System%20Security%20fun!&amp;url=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+                                            <path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+                                            <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+        <aside class="read-next outer">
+            <div class="inner">
+                <div class="read-next-feed">
+                </div>
+            </div>
+        </aside>
+        <div class="floating-header">
+            <div class="floating-header-logo">
+                <a href="/index.html">
+                    <span>btr.pm</span>
+                </a>
+            </div>
+            <span class="floating-header-divider">—</span>
+            <div class="floating-header-title">Boeing 787 In Flight Entertainment System Security fun!</div>
+            <div class="floating-header-share">
+                <a class="floating-header-share-tw" href="https://twitter.com/share?text=Boeing%20787%20In%20Flight%20Entertainment%20System%20Security%20fun!&amp;url=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+                        <path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path>
+                    </svg>
+                </a>
+                <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+                        <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+                    </svg>
+                </a>
+            </div>
+            <progress id="reading-progress" class="progress" value="0">
+                <div class="progress-container">
+                    <span class="progress-bar"></span>
+                </div>
+            </progress>
+        </div>
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/index.html">btr.pm</a>&nbsp
+                    <p id="yr" style="display:inline"></p>
+                </section>
+                <div class="social-links">
+                    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                            <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+    </script>
+    <script>
+    var d = new Date();
+    document.getElementById("yr").innerHTML = d.getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Boeing 787 In Flight Entertainment System Security fun!</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="description" content="Digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="../index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="btr.pm">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Boeing 787 In Flight Entertainment System Security fun!">
+    <meta property="og:description" content="In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+    <meta property="og:url" content="https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/">
+    <meta property="og:image" content="https://btr.pm/blog/content/images/2019/02/download-4.png">
+    <meta property="article:published_time" content="2017-05-12T08:20:00.000Z">
+    <meta property="article:modified_time" content="2019-02-18T09:37:39.000Z">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="netsec">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Boeing 787 In Flight Entertainment System Security fun!">
+    <meta name="twitter:description" content="In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.">
+    <meta name="twitter:url" content="https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/">
+    <meta name="twitter:image" content="https://btr.pm/blog/content/images/2019/02/download-3.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Dash Bell">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Tech, netsec">
+    <meta name="twitter:site" content="@tryghost">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="298">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "btr.pm",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://btr.pm/blog/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dash Bell",
+        "url": "https://btr.pm/blog/author/dash/",
+        "sameAs": []
+    },
+    "headline": "Boeing 787 In Flight Entertainment System Security fun!",
+    "url": "https://btr.pm/blog/boeing-787-in-flight-entertainment-system-security-fun/",
+    "datePublished": "2017-05-12T08:20:00.000Z",
+    "dateModified": "2019-02-18T09:37:39.000Z",
+    "keywords": "Tech, netsec",
+    "description": "In 2016 a post from IOActive Labs showcased how shoddily made and managed Panasonic&#x27;s In-Flight Entertainment Systems (IFEs) are that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://btr.pm/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.14">
+    <link rel="alternate" type="application/rss+xml" title="btr.pm" href="../../rss/index.html">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
+    <style amp-custom>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{margin:0.67em 0;font-size:2em}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{position:relative;vertical-align:baseline;font-size:75%;line-height:0}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}amp-img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;color:inherit;font:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{margin:0 2px;padding:0.35em 0.625em 0.75em;border:1px solid #c0c0c0}legend{padding:0;border:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}html{max-height:100%;height:100%;font-size:62.5%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}body{max-height:100%;height:100%;color:#3a4145;background:#f4f8fb;letter-spacing:0.01rem;font-family:"Merriweather", serif;font-size:1.8rem;line-height:1.75em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"kern" 1;-moz-font-feature-settings:"kern" 1;-o-font-feature-settings:"kern" 1}::-moz-selection{background:#d6edff}::selection{background:#d6edff}h1,h2,h3,h4,h5,h6{margin:0 0 0.3em 0;color:#2e2e2e;font-family:"Open Sans", sans-serif;line-height:1.15em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-moz-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-o-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1}h1{text-indent:-2px;letter-spacing:-1px;font-size:2.6rem}h2{letter-spacing:0;font-size:2.4rem}h3{letter-spacing:-0.6px;font-size:2.1rem}h4{font-size:1.9rem}h5{font-size:1.8rem}h6{font-size:1.8rem}a{color:#4a4a4a}a:hover{color:#111}p,ul,ol,dl{margin:0 0 2.5rem 0;font-size:1.5rem;text-rendering:geometricPrecision;-webkit-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-moz-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-o-font-feature-settings:"liga" 1, "onum" 1, "kern" 1}ol,ul{padding-left:2em}ol ol,ul ul,ul ol,ol ul{margin:0 0 0.4em 0;padding-left:2em}dl dt{float:left;clear:left;overflow:hidden;margin-bottom:1em;width:180px;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-bottom:1em;margin-left:200px}li{margin:0.4em 0}li li{margin:0}hr{display:block;margin:1.75em 0;padding:0;height:1px;border:0;border-top:#efefef 1px solid}blockquote{box-sizing:border-box;margin:1.75em 0 1.75em 0;padding:0 0 0 1.75em;border-left:#4a4a4a 0.4em solid;-moz-box-sizing:border-box}blockquote p{margin:0.8em 0;font-style:italic}blockquote small{display:inline-block;margin:0.8em 0 0.8em 1.5em;color:#ccc;font-size:0.9em}blockquote small:before{content:"\2014 \00A0"}blockquote cite{font-weight:700}blockquote cite a{font-weight:normal}mark{background-color:#fdffb6}code,tt{padding:1px 3px;border:#e3edf3 1px solid;background:#f7fafb;border-radius:2px;white-space:pre-wrap;font-family:Inconsolata, monospace, sans-serif;font-size:0.85em;font-feature-settings:"liga" 0;-webkit-font-feature-settings:"liga" 0;-moz-font-feature-settings:"liga" 0}pre{overflow:auto;box-sizing:border-box;margin:0 0 1.75em 0;padding:10px;width:100%;border:#e3edf3 1px solid;background:#f7fafb;border-radius:3px;white-space:pre;font-family:Inconsolata, monospace, sans-serif;font-size:0.9em;-moz-box-sizing:border-box}pre code,pre tt{padding:0;border:none;background:transparent;white-space:pre-wrap;font-size:inherit}kbd{display:inline-block;margin-bottom:0.4em;padding:1px 8px;border:#ccc 1px solid;background:#f4f4f4;border-radius:4px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;color:#666;text-shadow:#fff 0 1px 0;font-size:0.9em;font-weight:700}table{box-sizing:border-box;margin:1.75em 0;max-width:100%;width:100%;background-color:transparent;-moz-box-sizing:border-box}table th,table td{padding:8px;border-top:#efefef 1px solid;vertical-align:top;text-align:left;line-height:20px}table th{color:#000}table caption + thead tr:first-child th,table caption + thead tr:first-child td,table colgroup + thead tr:first-child th,table colgroup + thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td{border-top:0}table tbody + tbody{border-top:#efefef 2px solid}table table table{background-color:#fff}table tbody > tr:nth-child(odd) > td,table tbody > tr:nth-child(odd) > th{background-color:#f6f6f6}table.plain tbody > tr:nth-child(odd) > td,table.plain tbody > tr:nth-child(odd) > th{background:transparent}iframe,amp-iframe,.fluid-width-video-wrapper{display:block;margin:1.75em 0}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper amp-iframe{margin:0}textarea,select,input{margin:0 0 5px 0;padding:6px 9px;width:260px;outline:0;border:#e7eef2 1px solid;background:#fff;border-radius:4px;box-shadow:none;font-family:"Open Sans", sans-serif;font-size:1.6rem;line-height:1.4em;font-weight:100;-webkit-appearance:none}textarea{min-width:250px;min-height:80px;max-width:340px;width:100%;height:auto}input[type="text"]:focus,input[type="email"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,textarea:focus{outline:none;outline-width:0;border:#bbc7cc 1px solid;background:#fff}select{width:270px;height:30px;line-height:30px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.main-header{position:relative;display:table;overflow:hidden;box-sizing:border-box;width:100%;height:50px;background:#5ba4e5 no-repeat center center;background-size:cover;text-align:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}.content{background:#fff;padding-top:15px}.blog-title,.content{margin:auto;max-width:600px}.blog-title a{display:block;padding-right:16px;padding-left:16px;height:50px;color:#fff;text-decoration:none;font-family:"Open Sans", sans-serif;font-size:16px;line-height:50px;font-weight:600}.post{position:relative;margin-top:0;margin-right:16px;margin-left:16px;padding-bottom:0;max-width:100%;border-bottom:#ebf2f6 1px solid;word-wrap:break-word;font-size:0.95em;line-height:1.65em}.post-header{margin-bottom:1rem}.post-title{margin-bottom:0}.post-title a{text-decoration:none}.post-meta{display:block;margin:3px 0 0 0;color:#9eabb3;font-family:"Open Sans", sans-serif;font-size:1.3rem;line-height:2.2rem}.post-meta a{color:#9eabb3;text-decoration:none}.post-meta a:hover{text-decoration:underline}.post-meta .author{margin:0;font-size:1.3rem;line-height:1.3em}.post-date{display:inline-block;text-transform:uppercase;white-space:nowrap;font-size:1.2rem;line-height:1.2em}.post-image{margin:0;padding-top:3rem;padding-bottom:30px;border-top:1px #E8E8E8 solid}.post-content amp-img,.post-content amp-anim{position:relative;left:50%;display:block;padding:0;min-width:0;max-width:112%;width:calc(100% + 32px);height:auto;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)}.footnotes{font-size:1.3rem;line-height:1.6em;font-style:italic}.footnotes li{margin:0.6rem 0}.footnotes p{margin:0}.footnotes p a:last-child{text-decoration:none}.site-footer{position:relative;margin:0 auto 20px auto;padding:1rem 15px;max-width:600px;color:rgba(0,0,0,0.5);font-family:"Open Sans", sans-serif;font-size:1.1rem;line-height:1.75em}.site-footer a{color:rgba(0,0,0,0.5);text-decoration:none;font-weight:bold}.site-footer a:hover{border-bottom:#bbc7cc 1px solid}.poweredby{display:block;float:right;width:45%;text-align:right}.copyright{display:block;float:left;width:45%}</style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="../../index.html">btr.pm</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Boeing 787 In Flight Entertainment System Security fun!</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="../../author/dash/index.html">Dash Bell</a></p>
+                    <time class="post-date" datetime="2017-05-12">2017-05-12</time>
+                </section>
+            </header>
+            <section class="post-content">
+
+                <p>In 2016 a <a href="http://blog.ioactive.com/2016/12/in-flight-hacking-system.html">post from IOActive Labs</a> showcased how shoddily made and managed Panasonic's In-Flight Entertainment Systems (IFEs) used to be, found in thousands of commercial aircraft the post raised some concerns among the tech savvy frequent flyer, that blog post inspired me to do some digging into the newer IFEs found on newer aircraft such as the Boeing 787 Dreamliner.</p><figure class="kg-card kg-image-card"><figcaption>It's rare to find a Boeing-made IFE in their planes, you're most likely to find a Panasonic IFE such as the Panasonic EX3. (<a href="http://www.boeing.co.uk/products-services/commercial-airplanes/787.page">Source</a>)</figcaption></figure><p>I was on a Scoot Airlines flight from Singapore on one of their 787 Dreamliners when I was handed an access code to their in flight movies page by a stewardess, she told me to access it by connecting to the on board WiFi and going to http://scootwifi.com/. This domain doesn't exist outside the aircraft so they set up a DNS server on the plane to allow passengers to access the site with that URL.</p><figure class="kg-card kg-image-card"><figcaption>I was using a Chromium on a laptop with Ubuntu to access the site, so naturally the flash player on the site didn't work. Why are they still using flash? Oh, god.</figcaption></figure><p>I started poking around the site's source to find any interesting directories or domains on the plane but the only ones I could find 403'd when attempting to access them, not bad. I noticed a packet being received by the browser every few seconds called <a href="https://github.com/x8BitRain/InFlightEntertainment-Scoot787/blob/master/flightstatus"><em>flightstatus</em></a>, it's a JSON file with a bunch of aircraft statistics and values.</p><figure class="kg-card kg-image-card"></figure><p>This file includes a bunch of interesting values such as:</p>
+<blockquote>
+<p>td_id_decompression: "0"</p>
+</blockquote>
+<p>Not sure whether this indicates whether the cabin is pressurized or whether or not an uncontrolled decompression has happened, let's hope it never changes to 1 if it is the latter.</p>
+<blockquote>
+<p>td_id_all_doors_closed:"1"</p>
+</blockquote>
+<p>Whether or not all the doors are closed.</p>
+<blockquote>
+<p>td_id_flight_phase:"7"</p>
+</blockquote>
+<p>According to inflight.js, there are 16 different flight phases "CRUISING" being the phase when I found the file. I somehow doubt these phases are set manually because the "FLARE" phase usually lasts a few seconds before touchdown so an on board computer must be able to detect the current phase based on the flight plan or something along those lines.</p>
+<blockquote>
+<p>FlightPhase: {<br>
+UNKNOWN: 0,<br>
+POWER_UP: 1,<br>
+ENGINES_START: 2,<br>
+TAKE_OFF_POWER: 3,<br>
+ACCELERATING: 4,<br>
+LIFT_OFF: 5,<br>
+CLIMB: 6,<br>
+CRUISING: 7,<br>
+DESCENDING: 8,<br>
+APPROACH: 9,<br>
+GO_AROUND: 10,<br>
+FLARE: 11,<br>
+TOUCHDOWN: 12,<br>
+TAXI_TO_STOP: 13,<br>
+ENGINES_STOP: 14,<br>
+MAINTENANCE: 15 }</p>
+</blockquote>
+<p>There is also navigational info in this file such as:</p>
+<blockquote>
+<p>td_id_fltdata_head_wind_speed:""<br>
+td_id_fltdata_mach:"0847"<br>
+td_id_fltdata_present_position_latitude:"80007562"<br>
+td_id_fltdata_present_position_longitude:"00107289"<br>
+td_id_fltdata_time_at_destination:"1522"<br>
+td_id_fltdata_time_at_origin:"1522"<br>
+td_id_fltdata_time_at_takeoff:"000305170602"<br>
+td_id_fltdata_time_to_destination:"0201"<br>
+td_id_fltdata_true_heading:"0161"<br>
+td_id_fltdata_wind_direction:"0286"<br>
+td_id_fltdata_wind_speed:"-008"</p>
+</blockquote>
+<p>The only value I could see that was being utilized by the website was the <em>tdidfltdatatimetodestination</em> value which was shown at the top of the scootwifi.com page. This leads me to believe that this data is intended for use in the Flight Attendants Panel or the in-seat IFE system which have the interactive maps to see where the plane is on it's trip.</p>
+<figure class="kg-card kg-image-card"><figcaption>Some of the newer IFEs have 3D flight maps which would make use of this data. (<a href="http://edition.cnn.com/2014/02/09/travel/flight-maps-the-newest-airline-moneymaker/">Source</a>)</figcaption></figure><p>I saw a file called <em><a href="https://github.com/x8BitRain/InFlightEntertainment-Scoot787/blob/master/software.js">software.js</a> </em>that included links to some references to DRM plugins and extensions used for watching movies, for OSX, Windows, iOS, Android and an NPAPI plugin for Chrome.</p><blockquote>softwareLocation.plugin.drm.version = '3.0.1.1'; softwareLocation.plugin.drm.mac.software = 'PanasonicDrmPlugin.dmg'; softwareLocation.plugin.drm.mac.software_and_extension = 'PanasonicDrmPlugin_Extension.dmg'; softwareLocation.plugin.drm.windows.software = 'PanasonicDrmPlugin.msi'; softwareLocation.plugin.drm.windows.software_and_extension = 'PanasonicDrmPlugin_Extension.msi'; softwareLocation.plugin.flash.version = '11.5'; softwareLocation.plugin.flash.mac = softwareLocation.plugin.flash.mac; softwareLocation.plugin.flash.windows.activex = softwareLocation.plugin.flash.windows.activex; softwareLocation.plugin.flash.windows.npapi = softwareLocation.plugin.flash.windows.npapi; softwareLocation.mobile.ios.shellApp.osVersion = '5'; softwareLocation.mobile.ios.shellApp.sdkVersion = softwareLocation.mobile.ios.shellApp.sdkVersion; softwareLocation.mobile.ios.shellApp.appVersion = softwareLocation.mobile.ios.shellApp.appVersion; softwareLocation.mobile.ios.shellApp.url = softwareLocation.mobile.ios.shellApp.url; softwareLocation.mobile.android.shellApp.osVersion = '4.0'; softwareLocation.mobile.android.shellApp.sdkVersion = '01.03.0.34'; softwareLocation.mobile.android.shellApp.appVersion = '01.03.0.34'; softwareLocation.mobile.android.shellApp.url = 'ScooTVMediaPlayer.apk';</blockquote><p>This is a questionable approach to digitally restricting the movies available because you aren't told exactly what you're going to install other than it will make the movie you want to watch play, it could be something along the lines of the <a href="https://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal">Sony Anti-Piracy Rootkit</a> for all I know. Not to mention that NPAPI plugins for Chrome have been depreciated since January of 2014 because of security reasons. I was never prompted to download or install any of these "extensions" nor could I craft a link to download them myself so I couldn't do any digging into what exactly was being installed (most likely <a href="https://www.panasonic.aero/2015/02/24/panasonic-avionics-selects-intertrusts-expressplay-marlin-drm-techology-x-series-inflight-entertainment-ife-platform/">ExpressPlay's Marlin DRM</a>), why not just use <a href="http://www.widevine.com/">WideVine</a> which is built into most browsers?</p><figure class="kg-card kg-image-card"><figcaption>A really cool part of the whole system was how the page would fade into this announcement screen whenever the captain had something to say and fade back to the previous page.</figcaption></figure><p>In hindsight it is really not a good idea to be screwing with aircraft equipment like this, please don't be an idiot like me.  </p><p>A basic port scan shows that:</p><ul><li>Ports 80 and 443 are running NGINX 1.10 with a DigiCert SSL certificate for api.airpana.com.</li><li>Port 5710 is running <em>something.</em></li><li>Ports 58000 and 58001 are running lighttpd with a DigiCert SSL certificate for streaming.inflightpanasonic.aero.</li><li>The estimated OS running on the IFE server was Linux 3.2 - 4.6 (previous IFEs used Linux versions from 2002).</li></ul><p>This is pretty decent considering how horribly outdated some of the older IFEs are, I once flew in a Malaysian Airlines 767 with an IFE that showed Linux version 2.4 from 2002.</p><h1 id="final-thoughts">Final Thoughts</h1><p>I think the browser based approach to the IFE is a much better way of giving people something to do during flights because just about everyone has a smartphone or laptop nowadays, those in-seat systems with those horrible capacitive touch screens that freeze at any given moment are better off being a relic of the past. </p><p>The use of newer software to power the back end is a welcome addition as older software can contain serious vulnerabilities and could potentially lead to the cabin system being vulnerable. However, I think the flash player and the dodgy implementation of DRM could be done without, especially the depreciated NPAPI method of enabling it, the biggest problem being that I don't know exactly what I'm installing when they prompt me to download their plugins or their apps. Does it collect data? Does it it install root certificates I don't want? Will it screw with my browser? Some transparency would be nice, but even nicer would be to use something that doesn't need to be installed via an .MSI/.DMG file like WideVine which already exists in Chrome.</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="../../index.html">btr.pm</a> © 2019</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>
+</html>

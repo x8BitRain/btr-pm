@@ -1,0 +1,61 @@
+body {
+  margin: 0 10% !important;
+}
+
+#header .uk-card-body {
+  padding-top:20px;
+  padding-bottom:20px;
+  margin:15px;
+  text-align:left;
+}
+
+.uk-card-body {
+  margin:15px 0px 15px 0px !important;
+}
+
+.uk-button, .uk-nav, .uk-dropdown-nav > li > a {
+  font-weight: 400 !important;
+  text-align:left !important;
+  color: #333 !important;
+  font-family:B612 !important;
+  text-transform: capitalize !important;
+  font-size: 20px !important;
+}
+
+a:hover {
+  background-color:#f3f3f3;
+}
+
+.uk-inline > a:nth-child(1) {
+    background-color:#fff;
+}
+
+.uk-totop {
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform:scale(2);
+}
+
+.uk-card-default {
+  background: #fdfdfd;
+}
+
+#foot a {
+  margin-left:10px !important;
+}
+
+.uk-card-title, a:-webkit-any-link {
+    text-decoration:none !important;
+}
+
+.uk-card-title:hover {
+  background-color:#f3f3f3;
+}
+
+b.uk-inline > a:nth-child(1) {
+    background-color:#fff;
+}
+
+
+
