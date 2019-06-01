@@ -26,15 +26,16 @@
 </head>
 
 <body>
-    <section id="header">
+    <nav id="header">
         <div class="uk-card uk-card-default uk-card-body uk-light uk-animation-fade">
             <div class="uk-inline">
-                <a href="https://btr.pm"><img width="250" height="10" src="/img/btr.svg" onerror="this.onerror=null; this.src='img/btr.png'"></a>
-                <a href="https://btr.pm/"><button class="uk-button uk-button-primary" type="button">Photos</button></a>
-                <a href="/projects"><button class="uk-button uk-button-primary"><u>Projects</u></button></a>
-                <a href="/blog"><button class="uk-button uk-button-primary">Blog</button></a>
-                <a href="/contact"><button class="uk-button uk-button-primary">Contact</button></a>
-    </section>
+                <a id="l" href="https://btr.pm"><img width="250" height="10" src="/img/btr.svg" onerror="this.onerror=null; this.src='img/btr.png'"></a>
+                <a href="https://btr.pm/"><button>Photos</button></a>
+                <a href="/projects"><button class="u">Projects</button></a>
+                <a href="/blog"><button>Blog</button></a>
+                <a href="/contact"><button>Contact</button></a>
+    </nav>
+    <main>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-fade" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
             <img src="/projects/img/metaskycol.webp" onerror="this.onerror=null; this.src='/projects/img/metaskycol.jpg'" alt="" uk-cover>
@@ -133,48 +134,38 @@
                 </div>
             </div>
         </div>
+    </main>
+    <footer>
         <div class="uk-card uk-card-default uk-card-body">
             <div id="foot" class="uk-margin-small-right">
-                <a href="mailto:dbell@btr.pm"><img src="/img/mail.svg" width="20" height="20"></a>
+                <a href="mailto:dbell@btr.pm"><img id="emailid" src="/img/mail.svg"></a>
                 <div uk-dropdown="pos: top-right">
                     <ul class="uk-nav uk-dropdown-nav">
-                        <script type="text/javascript">
-                        function copyEmail() {
-                            var copyText = document.getElementById("email");
-
-                            copyText.select();
-
-                            document.execCommand("copy");
-
-                            //alert("Copied the text: " + copyText.value);
-                        }
-                        </script>
                         <li>
-                            <div class="uk-inline"><img src="/img/gmail.svg" width="28" height="28">
-                                <div class="uk-inline"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dbell@btr.pm&su=&cc=&bcc=&body=">Send in Gmail</a></div>
+                            <div class="uk-inline"><img src="/img/gmail.svg" width="20" height="20"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dbell@btr.pm&su=&cc=&bcc=&body=">Send in Gmail</a></div>
                         </li>
                         <li>
-                            <div class="uk-inline"><img src="/img/mail.svg" width="20" height="20"><a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=dbell@btr.pm&subject=&body=">Send in Outlook</a></div>
+                            <div class="uk-inline"><img src="/img/outlook.svg" width="20" height="20"><a href="https://outlook.office.com/owa/?path=/mail/action/compose&to=dbell@btr.pm&subject=&body=">Send in Outlook</a></div>
                         </li>
                         <li>
-                            <div class="uk-inline"><img src="/img/mail.svg" width="20" height="20"><a href="mailto:dbell@btr.pm">Send in Desktop mail app</a></div>
+                            <div class="uk-inline"><img src="/img/mail.svg" ><a href="mailto:dbell@btr.pm">Send in Client/App</a></div>
                         </li>
                         <li>
-                            <div class="uk-inline"><img src="/img/copy.svg" width="20" height="20"><a href="#" onClick="copyEmail()">Copy</a>
-                                <input id="email" style="width:9.5em;" class="uk-input" type="text" value="dbell@btr.pm">
+                            <div class="uk-inline"><img src="/img/copy.svg" ><a href="#" onClick="copyEmail()">Copy</a>
+                                <input id="email" style="width:9.5em" class="uk-input" type="text" value="dbell@btr.pm">
                             </div>
                         </li>
                     </ul>
                 </div>
-                <a href="https://www.linkedin.com/in/dashbell"><img src="/img/linkedin.svg" width="20" height="20"></a>
-                <a href="http://instagram.com/dash.bell"><img src="/img/instagram.svg" width="20" height="20"></a>
-                <a href="https://github.com/x8BitRain"><img src="/img/github.svg" width="20" height="20"></a>
-                <a href="https://codepen.io/BitRain"><img src="/img/codepen.svg" width="20" height="20"></a>
+                <a href="https://www.linkedin.com/in/dashbell"><img src="/img/linkedin.svg"></a>
+                <a href="http://instagram.com/dash.bell"><img src="/img/instagram.svg" ></a>
+                <a href="https://github.com/x8BitRain"><img src="/img/github.svg" ></a>
+                <a href="https://codepen.io/BitRain"><img src="/img/codepen.svg" ></a>
                 <a href="https://brave.com/btr124"><img src="/img/brave.svg" width="16.5" height="16.5"></a>
             </div>
         </div>
         <a href="#" uk-totop uk-scroll></a>
     </div>
+</footer>
 </body>
-
 </html>

@@ -1,3 +1,5 @@
+@import url(/css/button.css);
+
 #header .uk-card-body {
   padding-top:20px;
   padding-bottom:20px;
@@ -33,10 +35,6 @@ body {
   font-size: 20px !important;
 }
 
-a:hover {
-  background-color:#f3f3f3;
-}
-
 .uk-inline > a:nth-child(1) {
     background-color:#fff;
 }
@@ -54,9 +52,12 @@ a:hover {
   
 }
 
+/*no footer for first 3 seconds*/
 #footer {
   display:none;
 }
+
+
 
 
 
