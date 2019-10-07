@@ -49,7 +49,10 @@ body {
 
 #foot a {
   margin-right:15px !important;
+}
 
+#mailto > ul > li > div > img {
+    margin-right: 15px !important;
 }
 
 /*no footer for first 3 seconds*/
