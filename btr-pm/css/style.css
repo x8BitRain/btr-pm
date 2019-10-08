@@ -11,6 +11,12 @@
     transform:scale(2);
 }
 
+/*no footer for first 3 seconds*/
+footer {
+  display:none;
+}
+
+
 
 
 

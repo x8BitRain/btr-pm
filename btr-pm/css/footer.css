@@ -29,8 +29,3 @@ footer .uk-card-body {
 #mailto .uk-inline > a:nth-child(1) {
     background-color:#fff;
 }
-
-/*no footer for first 3 seconds*/
-footer {
-  display:none;
-}

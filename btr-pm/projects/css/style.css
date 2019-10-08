@@ -1,4 +1,6 @@
 @import url(/css/button.css);
+@import url(/css/navbar.css);
+@import url(/css/footer.css);
 
 body {
   margin: 0 10% !important;
@@ -15,20 +17,6 @@ body {
   margin:15px 0px 15px 0px !important;
 }
 
-.uk-button, .uk-nav, .uk-dropdown-nav > li > a {
-  font-weight: 400 !important;
-  text-align:left !important;
-  color: #333 !important;
-  font-family:B612 !important;
-  text-transform: capitalize !important;
-  font-size: 20px !important;
-}
-
-
-.uk-inline > a:nth-child(1) {
-    background-color:#fff;
-}
-
 .uk-totop {
   position: fixed;
     bottom: 20px;
@@ -40,8 +28,4 @@ body {
   background: #fdfdfd;
 }
 
-#foot a {
-  margin-right:15px !important;
-  text-decoration: none;
-  color:#666;
-}
+
