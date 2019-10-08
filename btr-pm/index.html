@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js" async></script>
     <script type="text/javascript">setTimeout(function(){
-  document.getElementById("footer").style.display = "block";
+  document.querySelector("body > footer").style.display = "block";
  }, 5500);
 </script>
     <style>
@@ -148,13 +148,13 @@
   <a href="img/002.jpg"><div><img data-src="img-s/002.webp" loading="lazy" onerror="this.onerror=null; this.src='img-c/002.jpg'" height="600" uk-img></div>
   <a href="img/009.jpg"><div><img data-src="img-s/009.webp" loading="lazy" onerror="this.onerror=null; this.src='img-c/009.jpg'" height="600" uk-img></div>
   <a href="img/005.jpg"><div><img data-src="img-s/005.webp" loading="lazy" onerror="this.onerror=null; this.src='img-c/005.jpg'" height="600" uk-img></div>
-  <a href="img/004.jpg"><div><img data-src="img-s/004.webp" loading="lazy" onerror="this.onerror=null; this.src='img-c/004.jpg'" height="600" uk-img></div>
+  <a href="img/004.jpg"><div><img data-src="img-s/004.webp" loading="lazy" onerror="this.onerror=null; this.src='img-c/004.jpg'" height="600" uk-img></div></a>
 
     </div>
 </main>
 
 <footer>
-<div id="footer" class="uk-card uk-card-default uk-card-body">
+<div class="uk-card uk-card-default uk-card-body">
             <div id="foot" class="uk-margin-small-right">
                 <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;'><img id="emailid" src="/img/mail.svg"></a>
                 <div id="mailto" uk-dropdown="pos: top-right">

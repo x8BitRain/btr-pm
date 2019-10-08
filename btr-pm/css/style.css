@@ -1,43 +1,7 @@
 @import url(/css/button.css);
-
-#header .uk-card-body {
-  padding-top:20px;
-  padding-bottom:20px;
-  margin:15px;
-}
-
-img:not([src*=".svg"]) {
-  padding: 2px 2px 2px 2px !important;
-}
-
-body {
-  padding: 2px;
-}
-
-.uk-lightbox-toolbar {
-    background: none !important;
-}
-
-.uk-card-default {
-  margin:35px;
-}
-
-.uk-card-body {
-  margin:30px;
-}
-
-.uk-button, .uk-nav, .uk-dropdown-nav > li > a {
-  font-weight: 400 !important;
-  text-align:left !important;
-  color: #333 !important;
-  font-family:B612 !important;
-  text-transform: capitalize !important;
-  font-size: 20px !important;
-}
-
-.uk-inline > a:nth-child(1) {
-    background-color:#fff;
-}
+@import url(/css/navbar.css);
+@import url(/css/footer.css);
+@import url(/css/gallery.css);
 
 .uk-totop {
   position: fixed;
@@ -47,18 +11,6 @@ body {
     transform:scale(2);
 }
 
-#foot a {
-  margin-right:15px !important;
-}
-
-#mailto > ul > li > div > img {
-    margin-right: 15px !important;
-}
-
-/*no footer for first 3 seconds*/
-#footer {
-  display:none;
-}
 
 
 
