@@ -14,14 +14,17 @@
   <meta name="theme-color" content="#202125">
   <title>Page Not Found</title>
   <style>
-    @import url(https://fonts.googleapis.com/css?family=B612);*,a,b,body,h1,h2,h3,h4,h5,h6,i,p{font-family:B612,sans-serif;color:#fff}body{overflow:hidden!important}.cols-container{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;position:absolute;top:0;left:0;cursor:crosshair;background-color:#fff;height:100%;width:100%;background-color:#fff}.cols-container>div{transition:all .2s ease-in-out;text-align:center}.active{padding:320px;overflow:hidden;border:40px solid #fff}
+    @import url(https://fonts.googleapis.com/css?family=B612);*,a,b,body,h1,h2,h3,h4,h5,h6,i,p{font-family:B612,sans-serif;color:#fff}body{overflow:hidden!important}.cols-container{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;position:absolute;top:0;left:0;cursor:pointer;background-color:#fff;height:100%;width:100%;background-color:#fff}.cols-container>div{transition:all .2s ease-in-out;text-align:center}.active{padding:320px;overflow:hidden;border:40px solid #fff}
   </style>
     <body>
+      <a href="/">
       <div class="cols-container">
         <!-- Colors are inserted through javascript -->
       </div>
+      </a>
     </body>
     <script>
       const rgbas={0:[96,195,34,255],1:[87,87,87,255],2:[173,35,35,255],3:[42,75,215,255],4:[29,105,20,255],5:[129,74,25,255],6:[129,38,192,255],7:[160,160,160,255],8:[129,197,122,255],9:[157,175,255,255],10:[41,208,208,255],11:[255,146,51,255],12:[255,238,51,255],13:[233,222,187,255],14:[255,205,243,255],15:[0,0,0,255]};let cols=document.querySelector(".cols-container");for(let e=0;e<16;e++)cols.insertAdjacentHTML("beforeend",`<div style='background-color:rgba(${rgbas[e][0]},${rgbas[e][1]},${rgbas[e][2]},${rgbas[e][3]/255});'></div>`),cols.children[e].addEventListener("mouseover",e=>{color=e.currentTarget.style.backgroundColor;const r=document.querySelector(".active");r&&(r.classList.remove("active"),r.innerText=""),e.currentTarget.classList.add("active"),e.currentTarget.innerHTML="<h1>404 not found</h1>"});
+        const getRandomColor=()=>{for(var t="#",e=0;e<6;e++)t+="0123456789ABCDEF"[Math.floor(16*Math.random())];return t};setInterval(function(){document.querySelector('meta[name="theme-color"]').setAttribute("content",getRandomColor())},1e3);
     </script>
 </html>
