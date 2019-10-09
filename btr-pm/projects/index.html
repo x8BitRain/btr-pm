@@ -21,8 +21,10 @@
     <link rel="dns-prefetch" href="//btrdotpm.firebaseapp.com">
     <link rel="stylesheet" href="/projects/css/style.css">
     <meta property="og:url" content="https://btr.pm/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" async></script>
+    <script src="/js/main.js" async></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=B612');
   	*, body, a, b, p, h1, h2, h3, h4, h5, h6, i {font-family: 'B612', sans-serif;}
@@ -34,13 +36,13 @@
         <div class="uk-card uk-card-default uk-card-body uk-light uk-animation-fade">
             <div class="uk-inline">
                 <a id="l" href="https://btr.pm"><img width="250" height="10" src="/img/btr.svg" onerror="this.onerror=null; this.src='/img/btr.png'"></a>
-                <a href="https://btr.pm/"><button>Photos</button></a>
+                <a href="/"><button>Photos</button></a>
                 <a href="/projects"><button class="u">Projects</button></a>
                 <a href="/blog"><button>Blog</button></a>
                 <a href="/contact"><button>Contact</button></a>
     </nav>
     <main>
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-fade" uk-grid>
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-animation-fade" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
             <img src="/projects/img/thepixelgrid.webp" onerror="this.onerror=null; this.src='/projects/img/thepixelgrid.jpg'" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
@@ -53,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-fade" uk-grid>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-animation-fade" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
             <img src="/projects/img/metaskycol.webp" onerror="this.onerror=null; this.src='/projects/img/metaskycol.jpg'" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
@@ -67,8 +69,7 @@
             </div>
         </div>
     </div>
-    <div id="content">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-fade" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-animation-fade" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
                 <img src="/projects/img/gallery.webp" onerror="this.onerror=null; this.src='/projects/img/gallery.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -81,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
             <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
                 <img src="/projects/img/corruptwiki.webp" onerror="this.onerror=null; this.src='/projects/img/corruptwiki.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -95,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
                 <img src="/projects/img/sgair2018.webp" onerror="this.onerror=null; this.src='/projects/img/sgair2018.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -110,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
             <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
                 <img src="/projects/img/rumreggae.webp" onerror="this.onerror=null; this.src='/projects/img/rumreggae.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -124,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
                 <img src="/projects/img/sr.webp" onerror="this.onerror=null; this.src='/projects/img/sr.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -137,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
             <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
                 <img src="/projects/img/btrpm.jpg" onerror="this.onerror=null; this.src='/projects/img/btrpm.jpg'" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
@@ -155,7 +156,7 @@
 <footer>
 <div class="uk-card uk-card-default uk-card-body">
             <div id="foot" class="uk-margin-small-right">
-                <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;'><img id="emailid" src="/img/mail.svg"></a>
+                <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;'><img id="emailid" src="/img/mail.svg" ></a>
                 <div id="mailto" uk-dropdown="pos: top-right">
                     <ul class="uk-nav uk-dropdown-nav">
                         <li>
@@ -168,7 +169,7 @@
                             <div class="uk-inline"><img src="/img/mail.svg" ><a href="mailto:&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;">Send in Client/App</a></div>
                         </li>
                         <li>
-                            <div class="uk-inline"><img src="/img/copy.svg" ><a href="#" onClick="copyEmail()">Copy</a>
+                            <div class="uk-inline"><img src="/img/copy.svg" ><a href="#email" onClick="copyEmail()">Copy</a>
                                 <input id="email" style="width:9.5em" class="uk-input" type="text" value="&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;">
                             </div>
                         </li>
@@ -181,5 +182,6 @@
             </div>
         </div>
       </footer>
+      <a href="#" uk-totop uk-scroll></a>
 </body>
 </html>

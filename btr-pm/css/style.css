@@ -2,14 +2,7 @@
 @import url(/css/navbar.css);
 @import url(/css/footer.css);
 @import url(/css/gallery.css);
-
-.uk-totop {
-  position: fixed;
-  z-index:999;
-    bottom: 20px;
-    right: 20px;
-    transform:scale(2);
-}
+@import url(/css/totop.css);
 
 /*no footer for first 3 seconds*/
 footer {

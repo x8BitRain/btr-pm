@@ -1,6 +1,7 @@
 @import url(/css/button.css);
 @import url(/css/navbar.css);
 @import url(/css/footer.css);
+@import url(/css/totop.css);
 
 body {
   margin: 0 10% !important;
@@ -17,12 +18,6 @@ body {
   margin:15px 0px 15px 0px !important;
 }
 
-.uk-totop {
-  position: fixed;
-    bottom: 20px;
-    right: 20px;
-    transform:scale(2);
-}
 
 .uk-card-default {
   background: #fdfdfd;
