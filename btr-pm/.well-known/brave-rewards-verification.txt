@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: btr.pm
-Token: 82cb7f96e5f0a382753971fa87d48203f550a73b918fc94887ee2be52e20abd3
