@@ -9,7 +9,7 @@ button {
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: white;
+  background-color: #ffffff00;
   overflow: hidden;
   transition: color 0.4s ease-in-out;
 }
@@ -60,7 +60,7 @@ a {
 }
 
 a::before {
-  content: '';
+  /*content: '';*/
   position: absolute;
   bottom: 0;
   left: 0;

@@ -7,6 +7,15 @@ body {
   margin: 0 10% !important;
 }
 
+.fun-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
 #header .uk-card-body {
   padding-top:20px;
   padding-bottom:20px;

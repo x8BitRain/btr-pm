@@ -1,6 +1,6 @@
 setTimeout(function() {
   document.querySelector("body > footer").style.display = "block";
- }, 3500);
+ }, 5500);
 
 const copyEmail = () => {
   let copyText = document.getElementById("email");
@@ -15,4 +15,3 @@ const copyEmail = () => {
     icon.style.filter = "drop-shadow(0px 0 0px)";
   }, 2000);
 }
-
