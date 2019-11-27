@@ -32,4 +32,22 @@ body {
   background: #fdfdfd;
 }
 
+.uk-label {
+  transform: scale(0.75);
+}
+
+.label-react {
+  background-color:#09d2ac !important;
+}
+
+.label-rails {
+  background-color:#c00 !important;
+}
+
+.label-js {
+  background-color:#f0db4f !important;
+}
+
+
+
 
