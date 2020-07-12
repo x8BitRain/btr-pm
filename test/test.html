@@ -118,5 +118,28 @@ background:#fff;
     }
   }
 </style>
+<div hidden>
+
+  <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+
+    <h3 style="margin:0">Contact</h3>
+
+    <div style="height:0px; width:0px; overflow:hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </div>
+
+    <div class="uk-margin">
+        <input class="uk-input" type="email" name="email" placeholder="Email">
+    </div>
+
+    <div class="uk-margin">
+        <textarea name="message" class="uk-textarea" rows="5" placeholder="What do you want contact me about?"></textarea>
+    </div>
+
+    <button type="submit" class="uk-button uk-button-primary">Submit</button>
+
+</form>
+
+</div>
   </body>
 </html>
