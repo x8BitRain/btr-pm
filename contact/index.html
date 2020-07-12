@@ -47,25 +47,23 @@
   <div class="uk-card uk-card-default uk-card-body">
     <div id="foot" class="uk-margin-small-right uk-width-1-2@m uk-margin-auto uk-margin-large-top uk-margin-large-bottom">
       <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
-        <fieldset class="uk-fieldset">
-    
-            <legend class="uk-legend">Contact</legend>
 
-            <div style="height:0px; width:0px; overflow:hidden">
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </div>
-    
-            <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Email">
-            </div>
-    
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="What do you want contact me about?"></textarea>
-            </div>
+        <h3 style="margin:0">Contact</h3>
 
-            <button type="submit" class="uk-button uk-button-default">Submit</button>
-    
-        </fieldset>
+        <div style="height:0px; width:0px; overflow:hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </div>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="uk-margin">
+            <textarea name="message" class="uk-textarea" rows="5" placeholder="What do you want contact me about?"></textarea>
+        </div>
+
+        <button type="submit" class="uk-button uk-button-primary">Submit</button>
+
     </form>
     </div>
   </div>
